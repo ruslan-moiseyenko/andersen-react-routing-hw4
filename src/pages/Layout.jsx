@@ -1,10 +1,11 @@
-import { Outlet, NavLink } from "react-router";
+import { Outlet, NavLink } from "react-router-dom";
 import { Cart } from '../components/Cart/Cart';
+import styles from './Layout.module.css';
 
 export const Layout = () => {
     return (
         <>
-            <header className="App-header">
+            <header className={styles.header}>
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="about">About</NavLink>
                 <Cart />

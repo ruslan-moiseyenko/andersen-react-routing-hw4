@@ -1,0 +1,14 @@
+.product_card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.product__item {
+  margin: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}

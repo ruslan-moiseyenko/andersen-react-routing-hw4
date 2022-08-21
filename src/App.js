@@ -1,21 +1,23 @@
 import './App.css';
+import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Home, About, Layout } from './pages/index';
+import { About, Layout, Product, NotFound } from './pages/index';
+
+const Home = lazy(() =>
+  import('./pages/HomePage' /* webpackChunkName: "HomePage" */)
+);
 
 function App() {
   return (
-    <div className='App'>
+    <>
+      <Layout />
       <Routes>
-        <Route
-          path='/'
-          element={
-            <Layout>
-              <Home />
-            </Layout>
-          }
-        />
+        <Route index path='/' element={<Home />} />
+        <Route path='/:id' element={<Product />} />
+        <Route path='/about' element={<About />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
-    </div>
+    </>
   );
 }
 

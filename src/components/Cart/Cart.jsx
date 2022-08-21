@@ -1,7 +1,7 @@
 export const Cart = () => {
     return (
         <div>
-            <h1>That's a cart for products</h1>
+            <h3>The Cart</h3>
         </div>
     );
 };
