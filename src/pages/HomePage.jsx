@@ -22,9 +22,7 @@ export default function Home() {
             <ul className={ styles.product_card }>
                 { products.map(product => (
                     <li key={ product.id } className={ styles.product__item }>
-                        <Link to={ `${product.id}` }>
-                            <ProductCard data={ product } />
-                        </Link>
+                        <ProductCard data={ product } />
                     </li>
                 ))
                 }
