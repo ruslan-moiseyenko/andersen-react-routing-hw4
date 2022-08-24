@@ -2,6 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState, useContext } from 'react';
 import { CartContext } from '../utils/context';
 import { getData } from '../utils/getData';
+import styles from './ProductPage.module.css';
 
 export const Product = () => {
     const { id } = useParams();
@@ -60,23 +61,21 @@ export const Product = () => {
     return (
         <>
             { loading ? (<div>Loading...</div>) :
-                (<div className="wrapper">
-                    <h1 className="title">{ data.title }</h1>
-                    <img src={ data.images[0] } alt="product" className="img" />
-                    <div className="description">Description:
-                        <p className='description__text'>{ data.description }</p>
+                (<div className={ styles.wrapper }>
+                    <h2 className={ styles.title }>{ data.title }</h2>
+                    <img src={ data.images[0] } alt="product" className={ styles.img } />
+                    <div className={ styles.description }>Product description:
+                        <p className={ styles.description__text }>{ data.description }</p>
                     </div>
-                    <div className="price">Price: { data.price }</div>
+                    <div className={ styles.price }>Price: <span className={ styles.price__number }>{ data.price }</span></div>
                     <div className="add-to-cart">
-                        <div className='count'>
-                            <button className='count__minus' onClick={ minusCount }>-</button>
+                        <div className={ styles.count }>
+                            <button className={ styles.button } onClick={ minusCount }>-</button>
                             <span className='count__text'>{ count }</span>
-                            <button className='count__add' onClick={ addCount }>+</button>
+                            <button className={ styles.button } onClick={ addCount }>+</button>
                         </div>
-                        <button className="addButton" onClick={ onAddButton }>Add to cart</button>
+                        <button className={ styles.addButton } onClick={ onAddButton }>Add to cart</button>
                     </div>
-                    <div className="totalPrice">Total Price is: { data.price * count }</div>
-
 
                 </div>)
             }

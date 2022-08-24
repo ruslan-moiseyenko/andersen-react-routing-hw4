@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
 
 import { getData } from '../utils/getData';
 import { ProductCard } from '../components/ProductCard/ProductCard';
@@ -15,10 +14,8 @@ export default function Home() {
         getData('').then((res) => res.json()).then(data => setProducts(data));
     }, [])
 
-    // useEffect(() => {console.log(products)},[products])
     return (
         <div>
-            <h1>Main home page</h1>
             <ul className={ styles.product_card }>
                 { products.map(product => (
                     <li key={ product.id } className={ styles.product__item }>

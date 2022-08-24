@@ -41,11 +41,9 @@ export const Layout = () => {
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="about">About</NavLink>
                 <Cart />
-                <button onClick={ onLoginButtonClick }>{ loginButtonText }</button>
+                <button className={ styles.button } onClick={ onLoginButtonClick }>{ loginButtonText }</button>
             </header>
-            <div className="container">
-                <Outlet />
-            </div>
+            <Outlet />
             { showModal && (
                 <Modal onClose={ toggleModal }>
                     <RegForm onClose={ toggleModal } onLogIn={ onLogIn } />

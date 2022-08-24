@@ -17,7 +17,6 @@
   align-items: center;
 }
 .wrapper:hover {
-  cursor: pointer;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -26,4 +25,24 @@
   font-weight: bold;
   color: #333;
   text-align: center;
+  margin-bottom: 5px;
+}
+
+.price {
+  margin-bottom: 5px;
+}
+
+.addButton {
+  height: 40px;
+  width: 90px;
+  background-color: black;
+  color: #efefef;
+}
+
+.activeStyle {
+  text-decoration: 'underline';
+}
+
+.inactiveStyle {
+  text-decoration: none;
 }

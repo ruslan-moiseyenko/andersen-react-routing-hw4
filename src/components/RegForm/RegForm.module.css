@@ -24,6 +24,9 @@
   width: 100px;
   margin-left: auto;
   margin-right: auto;
+
+  background-color: black;
+  color: #efefef;
 }
 
 .error {
