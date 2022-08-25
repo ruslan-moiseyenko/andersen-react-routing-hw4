@@ -16,3 +16,19 @@
   background-color: black;
   color: #efefef;
 }
+
+.activeStyle {
+  text-decoration: underline;
+  font-weight: 700;
+  color: green;
+}
+
+.inactiveStyle {
+  text-decoration: none;
+  color: black;
+}
+
+.inactiveStyle:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}

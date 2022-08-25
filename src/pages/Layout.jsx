@@ -38,8 +38,12 @@ export const Layout = () => {
     return (
         <>
             <header className={ styles.header }>
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="about">About</NavLink>
+                <NavLink to="/" className={ ({ isActive }) =>
+                    isActive ? styles.activeStyle : styles.inactiveStyle
+                }>Home</NavLink>
+                <NavLink to="about" className={ ({ isActive }) =>
+                    isActive ? styles.activeStyle : styles.inactiveStyle
+                }>About</NavLink>
                 <Cart />
                 <button className={ styles.button } onClick={ onLoginButtonClick }>{ loginButtonText }</button>
             </header>

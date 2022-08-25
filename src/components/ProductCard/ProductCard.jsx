@@ -20,7 +20,7 @@ export const ProductCard = ({ data = {} }) => {
     return (
         <div className={ styles.wrapper }>
             <img src={ images } className={ styles.image } alt='product'></img>
-            <NavLink to={ `product/${id}` } style={ ({ isActive }) =>
+            <NavLink to={ `product/${id}` } className={ ({ isActive }) =>
                 isActive ? styles.activeStyle : inactiveStyle
             }>
                 <div className={ styles.title }>{ title }</div>

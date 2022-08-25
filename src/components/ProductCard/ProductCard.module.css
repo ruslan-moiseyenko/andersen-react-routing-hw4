@@ -40,9 +40,14 @@
 }
 
 .activeStyle {
-  text-decoration: 'underline';
+  text-decoration: underline;
 }
 
 .inactiveStyle {
   text-decoration: none;
+}
+
+.inactiveStyle:hover {
+  text-decoration: underline;
+  font-weight: 700;
 }
